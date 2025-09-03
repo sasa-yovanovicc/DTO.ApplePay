@@ -9,13 +9,13 @@ namespace OpenPath.Dto.ApplePay
     public class TokenDto {
 
         [JsonProperty("paymentData")]
-        public PaymentDataDto PaymentData { get; set; }
+        public PaymentDataDto? PaymentData { get; set; }
 
         [JsonProperty("paymentMethod")]
-        public PaymentMethodDto PaymentMethod { get; set; }
+        public PaymentMethodDto? PaymentMethod { get; set; }
 
         [JsonProperty("transactionIdentifier")]
-        public string TransactionIdentifier { get; set; }
+        public string TransactionIdentifier { get; set; } = string.Empty;
 
     }
 

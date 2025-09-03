@@ -13,7 +13,7 @@ namespace OpenPath.Dto.ApplePay
         public Enumerator.Status Status { get; set; }
 
         [JsonProperty("errors")]
-        public List<ErrorDto> Errors { get; set; }
+        public List<ErrorDto> Errors { get; set; } = new List<ErrorDto>();
 
     }
 

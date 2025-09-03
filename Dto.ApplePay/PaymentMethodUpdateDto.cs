@@ -7,10 +7,10 @@ namespace OpenPath.Dto.ApplePay
     public class PaymentMethodUpdateDto {
 
         [JsonProperty("paymentMethod")]
-        public PaymentMethodDto PaymentMethod { get; set; }
+        public PaymentMethodDto? PaymentMethod { get; set; }
 
         [JsonProperty("update")]
-        public UpdateDto PaymentMethodUpdate { get; set; }
+        public UpdateDto? PaymentMethodUpdate { get; set; }
 
     }
 

@@ -6,7 +6,7 @@ namespace OpenPath.Dto.ApplePay {
 
         [Required]
         [DataType(DataType.Url)]
-        public string ValidationUrl { get; set; }
+        public string ValidationUrl { get; set; } = string.Empty;
 
     }
 

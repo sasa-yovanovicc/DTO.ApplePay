@@ -6,10 +6,10 @@ namespace OpenPath.Dto.ApplePay {
     public class UpdateDto {
 
         [JsonProperty("newTotal")]
-        public LineItemDto NewTotal { get; set; }
+        public LineItemDto? NewTotal { get; set; }
 
         [JsonProperty("newLineItems")]
-        public List<LineItemDto> NewLineItems { get; set; }
+        public List<LineItemDto> NewLineItems { get; set; } = new List<LineItemDto>();
 
     }
 

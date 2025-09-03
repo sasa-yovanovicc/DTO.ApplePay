@@ -8,9 +8,9 @@ namespace OpenPath.Dto.ApplePay
     public class PaymentDataDictionaryDto
     {
         [JsonProperty("onlinePaymentCryptogram")]
-        public string OnlinePaymentCryptogram { get; set; }
+        public string OnlinePaymentCryptogram { get; set; } = string.Empty;
 
         [JsonProperty("eciIndicator")]
-        public string EciIndicator { get; set; }
+        public string EciIndicator { get; set; } = string.Empty;
     }
 }

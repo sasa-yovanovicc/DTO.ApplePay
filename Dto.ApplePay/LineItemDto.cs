@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using System.ComponentModel.DataAnnotations;
 
 namespace OpenPath.Dto.ApplePay {
 
@@ -20,7 +21,7 @@ namespace OpenPath.Dto.ApplePay {
         /// sheet displays the value in amount.
         /// </summary>
         [JsonProperty("type"), JsonConverter(typeof(StringEnumConverter))]
-        public Enumerator.LineItemType Type { get; set; }
+        public Enumerator.LineItemType Type { get; set; } = Enumerator.LineItemType.final;
 
         /// <summary>
         /// Required. A short, localized description of the line item.
@@ -29,7 +30,9 @@ namespace OpenPath.Dto.ApplePay {
         /// label is formatted for display by the framework.
         /// </summary>
         [JsonProperty("label")]
-        public string Label { get; set; }
+        [Required(ErrorMessage = "Label is required")]
+        [StringLength(100, MinimumLength = 1, ErrorMessage = "Label must be between 1 and 100 characters")]
+        public string Label { get; set; } = string.Empty;
 
         /// <summary>
         /// Required. The monetary amount of the line item.
@@ -38,7 +41,9 @@ namespace OpenPath.Dto.ApplePay {
         /// including line items by setting the currencyCode property in ApplePayPaymentRequest.
         /// </summary>
         [JsonProperty("amount")]
-        public string Amount { get; set; }
+        [Required(ErrorMessage = "Amount is required")]
+        [RegularExpression(@"^-?[0-9]+(\.[0-9]{1,2})?$", ErrorMessage = "Amount must be in format: -?[0-9]+.[0-9][0-9]")]
+        public string Amount { get; set; } = string.Empty;
 
     }
 

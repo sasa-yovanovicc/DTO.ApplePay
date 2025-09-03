@@ -9,13 +9,13 @@ namespace OpenPath.Dto.ApplePay
     public class HeaderDto {
 
         [JsonProperty("ephemeralPublicKey")]
-        public string EphemeralPublicKey { get; set; }
+        public string EphemeralPublicKey { get; set; } = string.Empty;
 
         [JsonProperty("publicKeyHash")]
-        public string PublicKeyHash { get; set; }
+        public string PublicKeyHash { get; set; } = string.Empty;
 
         [JsonProperty("transactionId")]
-        public string TransactionId { get; set; }
+        public string TransactionId { get; set; } = string.Empty;
 
     }
 

@@ -5,13 +5,13 @@ namespace OpenPath.Dto.ApplePay {
     public class MerchantSessionRequestDto {
 
         [JsonProperty("merchantIdentifier")]
-        public string MerchantIdentifier { get; set; }
+        public string MerchantIdentifier { get; set; } = string.Empty;
 
         [JsonProperty("domainName")]
-        public string DomainName { get; set; }
+        public string DomainName { get; set; } = string.Empty;
 
         [JsonProperty("displayName")]
-        public string DisplayName { get; set; }
+        public string DisplayName { get; set; } = string.Empty;
 
     }
 

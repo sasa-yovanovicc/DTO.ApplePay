@@ -26,14 +26,14 @@ namespace OpenPath.Dto.ApplePay {
     /// </summary>
     public class ErrorDto {
 
-        [JsonProperty("code")]
-        public string Code { get; set; }
+    [JsonProperty("code")]
+    public string Code { get; set; } = string.Empty;
 
-        [JsonProperty("contactField")]
-        public string ContactField { get; set; }
+    [JsonProperty("contactField")]
+    public string ContactField { get; set; } = string.Empty;
 
-        [JsonProperty("message")]
-        public string Message { get; set; }
+    [JsonProperty("message")]
+    public string Message { get; set; } = string.Empty;
 
     }
 

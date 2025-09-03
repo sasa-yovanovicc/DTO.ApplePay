@@ -6,10 +6,10 @@ namespace OpenPath.Dto.ApplePay
     public class ShippingContactUpdateDto {
 
         [JsonProperty("shippingContact")]
-        public ContactDto ShippingContact { get; set; }
+        public ContactDto? ShippingContact { get; set; }
 
         [JsonProperty("update")]
-        public ShippingContactUpdateExtendedDto ShippingContactUpdate { get; set; }
+        public ShippingContactUpdateExtendedDto? ShippingContactUpdate { get; set; }
 
     }
 
